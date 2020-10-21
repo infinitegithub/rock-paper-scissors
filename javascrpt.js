@@ -10,39 +10,36 @@ function computerChoice(){
     return randComChoice;
 }
 let x = computerChoice();
-console.log("the choice of the computer is "+x);
 
 let playerName = prompt("what's your name champ?");
 let promptString = "Make a choice !";
 let playerChoice = prompt(promptString.concat(playerName));
 console.log(playerChoice);
 
-function plays (){
+function play (){
  
-  switch (x, playerChoice ){
-    case choicesconsole.log("the value of x is "+ x+ "the player choice is "+ playerChoice);
-      alert("it's a TIE!");
+  switch (x && playerChoice ){
+    case choices[0] == choices[0]:
+    case choices[1] == choices[1]: 
+    case choices[2] == choices[2]:
+      alert("it's a draw")
+
       break;
-    /* case 2 :
-      computerChoice() == choices[0] && playerChoice == "paper" ;
-      let winner = "you have won this round ";
-      alert(winner.concat(playerName));
-      playerChoiceCount.push[1];
+     case choices[0] && choices[1]: 
+     case choices[2] && choices[0]: 
+      alert("You have won this round "+ playerName);
+     // playerChoiceCount.push[1];
       break;     
-    case 3 :
-      computerChoice() == choices[1] && playerChoice == "scissors"; 
-      let lost = "you have lost this round";
+    case choices[1] && choices[2]:
+     alert("you have lost this round " + playerName);
       alert(lost.concat(playerName));
-      computerCoiceCount.push[1];
+     // computerCoiceCount.push[1];
       break;
-    case 4 :
-      computerChoice() == choices[2] && playerChoice == "rock"; 
-      alert(winner.concat(playerName));
-      playerChoiceCount.push[1];
-      break; */
-    default:
-      console.log("the value of x is "+ x+ "the player choice is "+ playerChoice);
-      alert("It is not a tie");
+   
+   default:
+    alert("you have lost this round " + playerName);
+     //alert("the computer have chosen "+ x + "the player choice is "+ playerChoice);
+     // alert("It is not a tie");
       break;
   }
 
