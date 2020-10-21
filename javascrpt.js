@@ -43,9 +43,6 @@ function play (){
       break;
   }
 
-  function newFunction() {
-    ;
-  }
 }
 plays();
 //let playerChoiceCount =[];
