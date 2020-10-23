@@ -1,7 +1,11 @@
 
 
 let choices = ["rock", "paper", "scissors"];
-
+// number of rounds the computer won
+let x = 0;
+// number of rounds the player have won 
+let y = 0;
+// a function that returns a random choice from the choices array
 function computerChoice(){
     let randComChoice = choices[Math.floor( Math.random()* choices.length)];
     return randComChoice;
@@ -30,3 +34,4 @@ alert("you have lost this round ")
 
 round();
     console.log("the computer have chosen " + computerplay + " the player choice is " + playerChoice);
+
