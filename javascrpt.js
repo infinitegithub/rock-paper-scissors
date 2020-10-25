@@ -9,7 +9,7 @@ let computerscore = 0;
 let playerscore = 0;
 
 // a function that returns a random choice from the choices array
-function computerChoice(){
+function getComputerChoice(){
     let randComChoice = choices[Math.floor( Math.random()* choices.length)];
     return randComChoice;
 }
@@ -20,13 +20,13 @@ let playerName = username.toLowerCase();
 
 // creating a function that  takes the users input and makes sure  it from within the array "choices[]"
 // and if it is not it propmts the user to input his chosen choice again 
-function Playerpick(){ 
+function getPlayerpick(){ 
     let choice = prompt("what's your choice " + playerName);
         choice = choice.toLowerCase();
-//this where it checks if the item is in the arry
+//this where it checks if the item is in the array
     if(!choices.includes(choice)){
         alert("Wrong input!! try again");
- Playerpick();
+ getPlayerpick();
     } 
     else {
        return choice;
@@ -34,11 +34,11 @@ function Playerpick(){
     }  
  
 // function that plays one single round
-function round(){
+function playRound(){
 
-    let computerplay = computerChoice();
+    let computerplay = getComputerChoice();
     //console.log(computerplay);
-    let playerChoice = Playerpick();
+    let playerChoice = getPlayerpick();
        if (computerplay == playerChoice){
          alert(" it's a draw!!!");
      }  else  if ( computerplay == choices[0] && playerChoice == choices[1]){
@@ -59,17 +59,17 @@ function round(){
      //console.log("the score of the player is "+playerscore);
      //console.log("the score of the computer is "+computerscore);
 }
-   // looping the round function five time 
+  
    
 for (let index = 1; index <= 5; index++) {
-    round();
+    playRound();
     
 }
 // ssince it is just five rounds one is bound to get incremented 
 // more than the other
 // so if the statment below is true
 if (playerscore > computerscore){
-    // the player gets this msg
+    
     alert("Congratulation  you have won!");
     //and regardless if win or lose you get the play again function
     playAgain();
@@ -83,6 +83,6 @@ else{
  function playAgain(){
      let anothergame = confirm("Would you like to play an other game?");
      if (anothergame == true){
-         round();
+         playRound();
      }
  }
