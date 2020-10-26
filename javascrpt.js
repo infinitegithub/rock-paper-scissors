@@ -65,9 +65,7 @@ for (let index = 1; index <= 5; index++) {
     playRound();
     
 }
-// ssince it is just five rounds one is bound to get incremented 
-// more than the other
-// so if the statment below is true
+
 if (playerscore > computerscore){
     
     alert("Congratulation  you have won!");
@@ -78,7 +76,7 @@ else{
     alert("My sincere apologies  you lost! ");
     playAgain();
 }
-// to give the play the option to playagain without the need to refresh the page
+// to give the play the option to play again without the need to refresh the page
 // and enter your name 
  function playAgain(){
      let anothergame = confirm("Would you like to play an other game?");
